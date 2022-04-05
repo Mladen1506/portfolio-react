@@ -311,3 +311,83 @@ h3 {
         opacity: 0;
     }
 }
+
+
+/* PORTFOLIO */
+
+.portfolio {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 3rem;
+}
+
+.portfolio .container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 40rem) {
+    .portfolio .container {
+        width: 70%;
+    }
+}
+
+.portfolio .container .item {
+    width: 230px;
+    height: 140px;
+    border-radius: 20px;
+    border: 1px solid #d3d3d3;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all .5 ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 40rem) {
+    .portfolio .container .item {
+        width: 230px;
+        height: 140px;
+    }
+}
+
+.portfolio .container .item:hover {
+    background-color: #15023a;
+}
+
+.portfolio .container .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio .container .item:hover img {
+    opacity: 0.2;
+}
+
+.portfolio .container .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio .container .item h3 {
+    position: absolute;
+    font-size: 20px;
+    opacity: 0;
+    text-align: center;
+}
+
+.portfolio .container .item:hover h3 {
+    opacity: 1;
+}
