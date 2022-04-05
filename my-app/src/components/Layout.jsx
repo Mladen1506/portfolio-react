@@ -2,6 +2,8 @@ import React from 'react';
 import { init } from 'ityped'
 import { useEffect, useRef } from 'react'
 import { staticFolder } from '../utils/url-lib';
+import PortfolioItem from './PortfolioItem';
+
 
 const Layout = () => {
 
@@ -84,7 +86,16 @@ const Layout = () => {
           </section>
 
           <section className="portfolio">
-            portfolio
+            <h1>Portfolio</h1>
+            <div className="container">
+
+                <PortfolioItem />
+                <PortfolioItem />
+                <PortfolioItem />
+                <PortfolioItem />
+                <PortfolioItem />
+                <PortfolioItem />
+            </div>
           </section>
 
           <section className="slider-container">
