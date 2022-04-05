@@ -9,6 +9,16 @@
     overflow-x: hidden;
 }
 
+html {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
 .layout {
     font-family: "Montserrat", sans-serif;
 }
@@ -18,7 +28,7 @@
     color: #15023a;
     height: 70px;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     z-index: 102;
 }
@@ -100,4 +110,204 @@ a {
     background-color: #15023a;
     transform-origin: left;
     transition: all 2s ease;
+}
+
+
+/* SECTIONS */
+
+.sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    position: relative;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+@media (min-width: 40rem) {
+    .sections {
+        -ms-scroll-snap-type: y mandatory;
+        scroll-snap-type: y mandatory;
+    }
+}
+
+.sections>* {
+    min-height: calc(100vh - 70px);
+    width: 100vw;
+    scroll-snap-align: start;
+}
+
+
+/* INTRO */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+}
+
+.intro .imgContainer {
+    background: linear-gradient(to bottom, whitesmoke 10%, transparent), url("/static/img/background.jpeg") center/cover no-repeat;
+    height: 90%;
+    width: 100%;
+    min-width: 800px;
+    border-radius: 0% 0% 30% 30%;
+    position: absolute;
+    top: 0;
+    bottom: 200px;
+}
+
+.intro #arrow {
+    position: absolute;
+    bottom: 10px;
+}
+
+.intro #arrow img {
+    width: 30px;
+    animation: arrowBlink 2s infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: arrowBlink;
+}
+
+.intro .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.intro .wrapper h1 {
+    display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    margin: 1% 0;
+}
+
+@media (min-width: 40rem) {
+    .intro .wrapper {
+        width: 50%;
+    }
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+@media (min-width: 40rem) {
+    .intro .wrapper h1 {
+        font-size: 3rem;
+        max-width: 90%;
+    }
+}
+
+.intro .wrapper h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+}
+
+.intro .wrapper h3 {
+    font-size: 2rem;
+}
+
+.intro .wrapper span {
+    font-family: "Roboto", sans-serif;
+    z-index: 2;
+    font-size: inherite;
+    color: red;
+}
+
+.intro .wrapper .ityped-cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.intro .wrapper .social {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.intro .wrapper .social .icone {
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem 1rem;
+    cursor: pointer;
+}
+
+.intro .wrapper .social .icone img {
+    width: 100%;
+}
+
+.intro .wrapper .social .icone:hover {
+    opacity: 0.5;
+}
+
+.intro .wrapper .buttons {
+    z-index: 2;
+    margin: 1rem 0;
+    display: flex;
+}
+
+.intro .wrapper .buttons a {
+    color: #15023a;
+    border-radius: 8px;
+    border: none;
+    padding: 0.5rem;
+    margin: 0.3rem 0.5rem;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
+
+.intro .wrapper .buttons a:hover,
+.intro .wrapper .buttons a:active {
+    background-color: #15023a;
+    color: white;
+}
+
+.intro #arrow {
+    position: absolute;
+    bottom: 10px;
+}
+
+.intro #arrow img {
+    width: 30px;
+    animation: arrowBlink 2s infinite;
+}
+
+@keyframes arrowBlink {
+    100% {
+        opacity: 0;
+    }
 }
