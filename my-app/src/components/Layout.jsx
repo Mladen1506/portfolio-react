@@ -3,6 +3,7 @@ import { init } from 'ityped'
 import { useEffect, useRef } from 'react'
 import { staticFolder } from '../utils/url-lib';
 import PortfolioItem from './PortfolioItem';
+import SliderItem from './SliderItem';
 
 
 const Layout = () => {
@@ -99,7 +100,11 @@ const Layout = () => {
           </section>
 
           <section className="slider-container">
-            slider
+            <div className="slider">
+                <SliderItem />
+            </div>
+            <img src={staticFolder() + "/img/arrow.png"} className="arrow left" alt="" />
+            <img src={staticFolder() + "/img/arrow.png"} className="arrow right" alt="" />
           </section>
 
           <section className="contact">
