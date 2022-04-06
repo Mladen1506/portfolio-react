@@ -590,3 +590,94 @@ h3 {
     font-size: 1rem;
     text-align: justify;
 }
+
+
+/* SECTION CONTACT */
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (min-width: 40rem) {
+    .contact {
+        flex-direction: row;
+    }
+}
+
+.contact .left {
+    flex: 1 1;
+    overflow: hidden;
+    display: none;
+}
+
+@media (min-width: 40rem) {
+    .contact .left {
+        display: block;
+    }
+}
+
+.contact .left img {
+    height: 100%;
+}
+
+.contact .right {
+    flex: 1 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .right h2 {
+    font-size: 30px;
+}
+
+.contact .right form {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+}
+
+@media (min-width: 40rem) {
+    .contact .right form {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+.contact .right form label {
+    width: 100%;
+    padding: 0.3rem 0;
+}
+
+.contact .right form input {
+    width: 100%;
+}
+
+.contact .right form textarea {
+    width: 100%;
+    height: 5rem;
+}
+
+.contact .right form button {
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    background-color: #dc143c;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+}

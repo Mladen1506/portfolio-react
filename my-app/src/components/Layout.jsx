@@ -90,25 +90,49 @@ const Layout = () => {
             <h1>Portfolio</h1>
             <div className="container">
 
-                <PortfolioItem />
-                <PortfolioItem />
-                <PortfolioItem />
-                <PortfolioItem />
-                <PortfolioItem />
-                <PortfolioItem />
+              <PortfolioItem />
+              <PortfolioItem />
+              <PortfolioItem />
+              <PortfolioItem />
+              <PortfolioItem />
+              <PortfolioItem />
             </div>
           </section>
 
           <section className="slider-container">
             <div className="slider">
-                <SliderItem />
+              <SliderItem />
             </div>
             <img src={staticFolder() + "/img/arrow.png"} className="arrow left" alt="" />
             <img src={staticFolder() + "/img/arrow.png"} className="arrow right" alt="" />
           </section>
 
-          <section className="contact">
-            contact
+          <section className="contact" id="contact">
+            <div className="left">
+              <img src={staticFolder() + "/img/shake.svg"} alt="hand shake" />
+            </div>
+            <div className="right">
+              <h2>Contact</h2>
+              <form id="myForm"><label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  placeholder="Your email..."
+                  required=""
+                />
+              </label>
+                <label>
+                  <textarea
+                    name="text"
+                    id="text"
+                    placeholder="Write something..."
+                    required=""
+                  />
+                </label>
+                <button type="submit">Send</button>
+              </form>
+            </div>
           </section>
         </div>
       </div>
