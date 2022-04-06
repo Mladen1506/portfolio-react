@@ -6,8 +6,11 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'NEKI_ACTION':
-            return state;
+        case 'ROUTE_SET':
+            return {
+                ...state,
+                route: action.payload
+            };
 
 
         default:
