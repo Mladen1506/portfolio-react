@@ -681,3 +681,17 @@ h3 {
     font-weight: 500;
     cursor: pointer;
 }
+
+.projectsPage {
+    padding-top: 0;
+    width: 100%;
+}
+
+.projectsPage .projects_container .container {
+    width: 90%;
+    margin: auto;
+}
+
+.projectsPage .projects_container .container .item {
+    padding-top: 80px;
+}

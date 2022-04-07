@@ -1,7 +1,5 @@
 import React from 'react';
-import { init } from 'ityped'
-import { useEffect, useRef } from 'react'
-import PageHome from './PageHome';
+import PageRouter from './PageRouter';
 
 
 const Layout = () => {
@@ -42,7 +40,7 @@ const Layout = () => {
       </div>
 
       <div className="layout-body">
-        <PageHome />
+        <PageRouter />
       </div>
 
 

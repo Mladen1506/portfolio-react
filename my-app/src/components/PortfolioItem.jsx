@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { actionRouteSet } from "../redux/actions";
 import { staticFolder } from "../utils/url-lib";
 
 const PortfolioItem = (props) => {
@@ -6,10 +7,7 @@ const PortfolioItem = (props) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch({
-      type: 'ROUTE_SET',
-      payload: 'PROJECTS'
-    });
+    dispatch(actionRouteSet('PROJECTS'));
   };
   return (
     <a href="/projects#burger" onClick={handleClick}>
