@@ -10,10 +10,10 @@ const PortfolioItem = (props) => {
     dispatch(actionRouteSet('PROJECTS'));
   };
   return (
-    <a href="/projects#burger" onClick={handleClick}>
+    <a href="/projects#horizeon" onClick={handleClick}>
       <div className="item">
-        <img src={staticFolder() + "/img/burger.png"} alt="test burger" />
-        <h3>React Burger Builder</h3>
+        <img src={staticFolder() + "/img/horizeon.png"} alt="test horizeon" />
+        <h3>HTML AND CSS</h3>
       </div>
     </a>
   )

@@ -1,11 +1,21 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { actionDrawerOpen } from '../redux/actions';
+import Drawer from './Drawer';
 import PageRouter from './PageRouter';
 
 
 const Layout = () => {
 
+  const dispatch = useDispatch();
+  const handleClickHamburger = (e) => {
+    dispatch(actionDrawerOpen());
+  };
+
   return (
     <div className="layout">
+
+      <Drawer />
 
 
       <div className="topbar false">
@@ -27,7 +37,7 @@ const Layout = () => {
             </div>
           </div>
           <div className="right">
-            <div className="humburger">
+            <div className="humburger" onClick={handleClickHamburger}>
               <span className="line1">
               </span>
               <span className="line2">

@@ -695,3 +695,24 @@ h3 {
 .projectsPage .projects_container .container .item {
     padding-top: 80px;
 }
+
+.drawer {
+    z-index: 99;
+    position: fixed;
+    top: 70px;
+    bottom: 0px;
+    right: 0px;
+    width: 0px;
+    outline: 1px solid green;
+    overflow: hidden;
+    background-color: #15023a;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.drawer.opened {
+    width: 350px;
+}
