@@ -1,6 +1,6 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { actionDrawerOpen } from '../redux/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { actionDrawerClose, actionDrawerOpen } from '../redux/actions';
 import Drawer from './Drawer';
 import PageRouter from './PageRouter';
 
@@ -8,8 +8,16 @@ import PageRouter from './PageRouter';
 const Layout = () => {
 
   const dispatch = useDispatch();
+
+  const drawerOpened = useSelector(state => state.drawerOpened);
+
   const handleClickHamburger = (e) => {
-    dispatch(actionDrawerOpen());
+    if (drawerOpened) {
+      dispatch(actionDrawerClose());
+    } else {
+      dispatch(actionDrawerOpen());
+
+    }
   };
 
   return (
@@ -18,7 +26,7 @@ const Layout = () => {
       <Drawer />
 
 
-      <div className="topbar false">
+      <div className={ drawerOpened ? "topbar active" : "topbar false"}>
         <div className="wrapper">
           <div className="left">
             <a href="/portfolio#intro">
