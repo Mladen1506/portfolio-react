@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { actionRouteSet } from "../redux/actions";
+import { actionRouteSet, actionRouteWithHashSet } from "../redux/actions";
 import { staticFolder } from "../utils/url-lib";
 
 const PortfolioItem = (props) => {
@@ -7,13 +7,14 @@ const PortfolioItem = (props) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch(actionRouteSet('PROJECTS'));
+    // dispatch(actionRouteSet('PROJECTS'));
+    dispatch(actionRouteWithHashSet('PROJECTS', props.fragment));
   };
   return (
     <a href="/projects#horizeon" onClick={handleClick}>
       <div className="item">
-        <img src={staticFolder() + "/img/horizeon.png"} alt="test horizeon" />
-        <h3>HTML AND CSS</h3>
+        <img src={staticFolder() + props.imagePath} alt="test horizeon" />
+        <h3>{props.title}</h3>
       </div>
     </a>
   )
