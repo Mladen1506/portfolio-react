@@ -78,7 +78,7 @@ const PageHome = (props) => {
             </a>
           </div>
           <div className="buttons">
-            <a href="/#portfolio">Portfolio</a>
+            <a href="/#portfolio" >Portfolio</a>
             <a href="/resume">Resume</a>
           </div>
         </div>
@@ -86,7 +86,7 @@ const PageHome = (props) => {
           <img src={staticFolder() + "/img/arrow.png"} alt="" /></a>
       </section>
 
-      <section className="portfolio">
+      <section className="portfolio" id='portfolio'>
         <h1>Portfolio</h1>
         <div className="container">
 

@@ -29,8 +29,15 @@ body {
     height: 70px;
     width: 100%;
     /* position: fixed; */
+    overflow: hidden;
     top: 0;
     z-index: 102;
+}
+
+.topbar.active {
+    background-color: #15023a;
+    color: #fff;
+    z-index: 103;
 }
 
 .topbar .wrapper,
@@ -703,7 +710,6 @@ h3 {
     bottom: 0px;
     right: 0px;
     width: 0px;
-    outline: 1px solid green;
     overflow: hidden;
     background-color: #15023a;
     color: white;
@@ -715,4 +721,24 @@ h3 {
 
 .drawer.opened {
     width: 350px;
+}
+
+.menuItems {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #fff;
+    width: 60%;
+}
+
+.menuItem {
+    margin-bottom: 20px;
+}
+
+.menuItem a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
 }
