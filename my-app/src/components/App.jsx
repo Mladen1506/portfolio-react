@@ -13,10 +13,10 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    if (routeFragment === '') {
-      window.location.hash = '';
-    } else {
+    if (typeof routeFragment === 'string') {
       window.location.hash = routeFragment;
+    } else {
+      window.location.hash = '';
     }
   }, [routeFragment]);
 

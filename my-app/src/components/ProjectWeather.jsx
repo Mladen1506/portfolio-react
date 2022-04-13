@@ -2,18 +2,18 @@ import { staticFolder } from "../utils/url-lib";
 import ProjectItem from "./ProjectItem";
 
 
-const ProjectHorizeon = () => {
+const ProjectWeather = () => {
   return (
     <ProjectItem>
-      <div className="project-title">Horizeon</div>
+      <div className="project-title">Weather Dashboard</div>
       <div className="project-overview">
         <div className="left">
           <div className="project-img-container">
-            <img src={staticFolder() + "/img/horizeon.png"} alt="" />
+            <img src={staticFolder() + "/img/weather.png"} alt="" />
           </div>
           <div className="project-buttons">
-            <a target="_blank" href="https://github.com/Mladen1506/horeason" rel="">GitHub</a>
-            <a target="_blank" href="https://mladen1506.github.io/horeason/" rel="">Live View</a>
+            <a target="_blank" href="https://github.com/Mladen1506/weather-dashboard" rel="">GitHub</a>
+            <a target="_blank" href="https://mladen1506.github.io/weather-dashboard/" rel="">Live View</a>
           </div>
         </div>
         <div className="right">
@@ -22,11 +22,14 @@ const ProjectHorizeon = () => {
             <ul className="project-tools__items">
               <li className="project-tools__item">HTML</li>
               <li className="project-tools__item">CSS</li>
+              <li className="project-tools__item">JavaScript</li>
+              <li className="project-tools__item">jQuery</li>
+              <li className="project-tools__item">OpenWeatherApi</li>
             </ul>
           </div>
           <div className="project-description">
             <h3 className="project-subtitle">Description:</h3>
-            <p className="project-paragraph">This is a web application that uses HTML and CSS to create a simple website.</p>
+            <p className="project-paragraph">A weather dashboard that provides current and future weather forecasts.App runs in browser, localStorage used to store data.</p>
           </div>
         </div>
       </div>
@@ -34,4 +37,4 @@ const ProjectHorizeon = () => {
   );
 };
 
-export default ProjectHorizeon;
+export default ProjectWeather;
