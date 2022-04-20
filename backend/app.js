@@ -4,10 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var cors = require('cors');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var sendEmailRouter = require('./routes/sendemail-router');
 
 var app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/sendemail', sendEmailRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
@@ -38,7 +44,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+/*
 
 // using Twilio SendGrid's v3 Node.js Library
 // https://github.com/sendgrid/sendgrid-nodejs
@@ -61,3 +67,7 @@ sgMail
   .catch((error) => {
     console.error(error)
   })
+  */
+ console.log('*** backend ready')
+
+module.exports = app;
