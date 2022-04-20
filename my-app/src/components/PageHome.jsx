@@ -60,7 +60,6 @@ const PageHome = (props) => {
           <PortfolioItem title="Budget Tracker" imagePath="/img/budget.png" fragment="budgettracker" />
           <PortfolioItem />
           <PortfolioItem />
-          <PortfolioItem />
         </div>
       </section>
 

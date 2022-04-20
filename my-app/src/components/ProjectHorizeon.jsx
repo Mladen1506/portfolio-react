@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 const ProjectHorizeon = () => {
   return (
     <ProjectItem>
-      <div className="project-title">Horizeon</div>
+      <div className="project-title" id="horizeon">Horizeon</div>
       <div className="project-overview">
         <div className="left">
           <div className="project-img-container">
