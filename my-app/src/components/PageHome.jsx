@@ -5,20 +5,42 @@ import { staticFolder } from '../utils/url-lib';
 import PortfolioItem from './PortfolioItem';
 import SliderItem from './SliderItem';
 import { ajax } from '../utils/ajax-adapter';
+import { useState } from 'react';
 
 
 const PageHome = (props) => {
 
+  const preset = {
+    email: '',
+    text: ''
+  };
+
+  const [state, setState] = useState(preset);
+
+  const handleChange = (e) => {
+    const target = e.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    setState({
+      ...state,
+      [name]: value
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // window.location.href = "mailto:address@gmail.com";
+    /*
     const formData = {
       readme: 'Temp data',
       youremail: 'test@gmail.com',
       text: 'Hello this is test...'
     };
+    */
+    const formData = state;
     ajax.sendContactEmail(formData);
-  }
+  };
 
   const textRef = useRef();
 
@@ -92,6 +114,8 @@ const PageHome = (props) => {
           <form id="myForm" onSubmit={handleSubmit}><label>
             <input
               name="email"
+              value={state.email}
+              onChange={handleChange}
               type="email"
               id="email"
               placeholder="Your email..."
@@ -101,6 +125,8 @@ const PageHome = (props) => {
             <label>
               <textarea
                 name="text"
+                value={state.text}
+                onChange={handleChange}
                 id="text"
                 placeholder="Write something..."
                 required=""

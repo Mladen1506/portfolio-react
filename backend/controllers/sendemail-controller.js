@@ -4,22 +4,22 @@ const sgMail = require('@sendgrid/mail');
 const sendEmailController = async (req, res, next) => {
   console.log('sendEmailController');
   console.log('req.body', req.body);
-  console.log('req.body.youremail', req.body.youremail);
-  console.log('req.body.text', req.body.text);
+  // console.log('req.body.youremail', req.body.youremail);
+  // console.log('req.body.text', req.body.text);
 
-  res.send('send email router GET(works but use POST method to send an email at /sendemail/contact');
+  // res.send('send email router GET(works but use POST method to send an email at /sendemail/contact');
 
   // using Twilio SendGrid's v3 Node.js Library
   // https://github.com/sendgrid/sendgrid-nodejs
   // javascript
   // sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  sgMail.setApiKey('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')
   const msg = {
     to: 'makivic.mladen1203@gmail.com', // Change to your recipient
     from: 'makivic.mladen1989@gmail.com', // Change to your verified sender
     subject: 'Mladen Portfolio: Sending with SendGrid is Fun' + req.body.youremail,
     text: req.body.text,
-    html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    html: '<div>' + req.body.text + '</div>',
   };
   // sgMail
   //   .send(msg)
