@@ -4,9 +4,21 @@ import { useEffect, useRef } from 'react'
 import { staticFolder } from '../utils/url-lib';
 import PortfolioItem from './PortfolioItem';
 import SliderItem from './SliderItem';
+import { ajax } from '../utils/ajax-adapter';
 
 
 const PageHome = (props) => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // window.location.href = "mailto:address@gmail.com";
+    const formData = {
+      readme: 'Temp data',
+      youremail: 'test@gmail.com',
+      text: 'Hello this is test...'
+    };
+    ajax.sendContactEmail(formData);
+  }
 
   const textRef = useRef();
 
@@ -77,7 +89,7 @@ const PageHome = (props) => {
         </div>
         <div className="right">
           <h2>Contact</h2>
-          <form id="myForm"><label>
+          <form id="myForm" onSubmit={handleSubmit}><label>
             <input
               name="email"
               type="email"
@@ -99,11 +111,6 @@ const PageHome = (props) => {
         </div>
       </section>
     </div>
-    //   </div>
-
-
-
-    // </div>
   );
 }
 
