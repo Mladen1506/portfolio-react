@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 const ProjectBudgetTracker = () => {
   return (
     <ProjectItem>
-      <div className="project-title">Budget Tracker</div>
+      <div className="project-title" id="budgettracker">Budget Tracker</div>
       <div className="project-overview">
         <div className="left">
           <div className="project-img-container">

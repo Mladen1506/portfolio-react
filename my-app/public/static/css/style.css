@@ -118,6 +118,17 @@ a {
     transform-origin: left;
     transition: all 2s ease;
 }
+.topbar.active .humburger span:first-child {
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.topbar.active .humburger span:nth-child(2) {
+  opacity: 0;
+}
+.topbar.active .humburger span:last-child {
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
 
 
 /* SECTIONS */

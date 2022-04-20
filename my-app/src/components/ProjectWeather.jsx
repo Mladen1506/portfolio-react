@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 const ProjectWeather = () => {
   return (
     <ProjectItem>
-      <div className="project-title">Weather Dashboard</div>
+      <div className="project-title" id="weatherapp">Weather Dashboard</div>
       <div className="project-overview">
         <div className="left">
           <div className="project-img-container">
