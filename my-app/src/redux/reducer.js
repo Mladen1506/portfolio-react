@@ -11,6 +11,7 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
 
+    
     case ROUTE_SET:
       return {
         ...state,
@@ -26,6 +27,7 @@ const rootReducer = (state = initialState, action) => {
         routeFreshness: state.routeFreshness + 1,
         routeFragment: action.payload.fragment
       };
+      
 
     case DRAWER_OPEN:
       return {

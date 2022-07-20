@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import Layout from './Layout';
+import { BrowserRouter } from 'react-router-dom';
 
 const App = () => {
 
@@ -22,9 +23,11 @@ const App = () => {
 
 
   return (
-    <div className="App">
-      <Layout />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Layout />
+      </div>
+    </BrowserRouter>
   );
 }
 

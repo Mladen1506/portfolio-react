@@ -1,14 +1,17 @@
 import { useDispatch } from "react-redux";
+// import { useNavigate } from "react-router-dom";
 import { actionRouteSet, actionRouteWithHashSet } from "../redux/actions";
 import { staticFolder } from "../utils/url-lib";
 
 const PortfolioItem = (props) => {
   const dispatch = useDispatch();
+  // const navigate = useNavigate();
 
   const handleClick = (e) => {
     e.preventDefault();
     // dispatch(actionRouteSet('PROJECTS'));
     dispatch(actionRouteWithHashSet('PROJECTS', props.fragment));
+    // navigate('/projects');
   };
   return (
     <a href="/projects#horizeon" onClick={handleClick}>
