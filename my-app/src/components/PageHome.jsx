@@ -1,17 +1,17 @@
 import React from 'react';
-import { init } from 'ityped'
-import { useEffect, useRef } from 'react'
 import { staticFolder } from '../utils/url-lib';
 import PortfolioItem from './PortfolioItem';
 import SliderItem from './SliderItem';
 import { ajax } from '../utils/ajax-adapter';
 import { useState } from 'react';
+import ReactTypingEffect from 'react-typing-effect';
+import SliderProjects from './SliderProjects';
 
 
 const PageHome = (props) => {
 
   const preset = {
-    email: '',
+    youremail: '',
     text: ''
   };
 
@@ -42,18 +42,6 @@ const PageHome = (props) => {
     ajax.sendContactEmail(formData);
   };
 
-  const textRef = useRef();
-
-  useEffect(() => {
-    init(textRef.current, {
-      showCursor: false,
-      backDelay: 1500,
-      backSpeed: 50,
-      showCursor: true,
-      strings: ["Full Stack Web Developer"]
-    })
-  }, [])
-
   return (
     <div className="sections">
       <section className="intro" id="intro">
@@ -62,7 +50,9 @@ const PageHome = (props) => {
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
           <h1>Mladen Makivic</h1>
-          <h3><span ref={textRef}></span><span className="ityped-cursor"></span></h3>
+          <h3><ReactTypingEffect
+            text={["Full Stack Web Developer"]}
+          /></h3>
           <div className="social"><a href="https://www.linkedin.com/feed/" target="_blank">
             <img className="icone" src={staticFolder() + "/img/linkedin.png"} alt="" />
           </a>
@@ -80,6 +70,7 @@ const PageHome = (props) => {
             <a href="/#portfolio" >Portfolio</a>
             <a href="/resume">Resume</a>
           </div>
+
         </div>
         <a href="#portfolio" id="arrow">
           <img src={staticFolder() + "/img/arrow.png"} alt="" /></a>
@@ -97,13 +88,9 @@ const PageHome = (props) => {
         </div>
       </section>
 
-      <section className="slider-container">
-        <div className="slider">
-          <SliderItem />
-        </div>
-        <img src={staticFolder() + "/img/arrow.png"} className="arrow left" alt="" />
-        <img src={staticFolder() + "/img/arrow.png"} className="arrow right" alt="" />
-      </section>
+
+      <SliderProjects />
+
 
       <section className="contact" id="contact">
         <div className="left">
@@ -113,7 +100,7 @@ const PageHome = (props) => {
           <h2>Contact</h2>
           <form id="myForm" onSubmit={handleSubmit}><label>
             <input
-              name="email"
+              name="youremail"
               value={state.email}
               onChange={handleChange}
               type="email"

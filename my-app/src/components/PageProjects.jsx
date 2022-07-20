@@ -8,9 +8,9 @@ const PageProjects = (props) => {
     <div className="projectsPage">
       <div className="projects_container">
 
-        <ProjectHorizeon></ProjectHorizeon>
-        <ProjectWeather></ProjectWeather>
-        <ProjectBudgetTracker></ProjectBudgetTracker>
+        <ProjectHorizeon />
+        <ProjectWeather />
+        <ProjectBudgetTracker />
       </div>
     </div>
   );

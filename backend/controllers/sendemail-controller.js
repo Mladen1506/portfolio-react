@@ -1,4 +1,5 @@
 const sgMail = require('@sendgrid/mail');
+require('dotenv').config();
 
 
 const sendEmailController = async (req, res, next) => {
@@ -12,7 +13,11 @@ const sendEmailController = async (req, res, next) => {
   // using Twilio SendGrid's v3 Node.js Library
   // https://github.com/sendgrid/sendgrid-nodejs
   // javascript
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  // const nesto = process.env.SENDGRID_API_KEY;
+  console.log(process.env);
+  console.log(process.env.SENDGRID_API_KEY);
+  // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: 'makivic.mladen1203@gmail.com', // Change to your recipient
     from: 'makivic.mladen1989@gmail.com', // Change to your verified sender

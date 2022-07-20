@@ -1,25 +1,31 @@
 import { useDispatch, useSelector } from "react-redux";
+// import { useNavigate } from "react-router-dom";
 import { actionRouteSet, actionRouteWithHashSet } from "../redux/actions";
 
 const Drawer = (props) => {
   const dispatch = useDispatch();
   const drawerOpened = useSelector(state => state.drawerOpened);
+  // const navigate = useNavigate();
 
   const handleClickHome = (e) => {
     e.preventDefault();
     dispatch(actionRouteWithHashSet('HOME', 'intro'));
+    // navigate('/');
   };
   const handleClickPortfolio = (e) => {
     e.preventDefault();
     dispatch(actionRouteWithHashSet('HOME', 'portfolio'));
+    // navigate('/');
   };
   const handleClickProjects = (e) => {
     e.preventDefault();
     dispatch(actionRouteSet('PROJECTS'));
+    // navigate('/projects');
   };
   const handleClickContact = (e) => {
     e.preventDefault();
     dispatch(actionRouteWithHashSet('HOME', 'contact'));
+    // navigate('/');
   };
   return (
     <div className={drawerOpened ? "drawer opened" : "drawer"}>
