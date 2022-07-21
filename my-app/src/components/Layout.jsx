@@ -16,7 +16,6 @@ const Layout = () => {
       dispatch(actionDrawerClose());
     } else {
       dispatch(actionDrawerOpen());
-
     }
   };
 

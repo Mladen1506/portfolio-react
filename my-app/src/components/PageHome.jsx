@@ -53,16 +53,15 @@ const PageHome = (props) => {
           <h3><ReactTypingEffect
             text={["Full Stack Web Developer"]}
           /></h3>
-          <div className="social"><a href="https://www.linkedin.com/feed/" target="_blank">
-            <img className="icone" src={staticFolder() + "/img/linkedin.png"} alt="" />
-          </a>
+          <div className="social"><a href="https://www.linkedin.com/in/mladen-makivic-181782198/" target="_blank">
+            <img className="icone" src={staticFolder() + "/img/linkedin.png"} alt="" /></a>
             <a href="https://github.com/Mladen1506" target="_blank">
               <img className="icone" src={staticFolder() + "/img/github.png"} alt="" />
             </a>
-            <a href="https://www.facebook.com/home.php" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100005717924831" target="_blank">
               <img className="icone" src={staticFolder() + "/img/facebook.png"} alt="" />
             </a>
-            <a href="https://www.instagram.com/?hl=en" target="_blank">
+            <a href="https://www.instagram.com/mladen_makivic1/" target="_blank">
               <img className="icone inst" src={staticFolder() + "/img/insta.png"} alt="" />
             </a>
           </div>
@@ -100,6 +99,7 @@ const PageHome = (props) => {
           <h2>Contact</h2>
           <form id="myForm" onSubmit={handleSubmit}><label>
             <input
+              disabled
               name="youremail"
               value={state.email}
               onChange={handleChange}
@@ -111,6 +111,7 @@ const PageHome = (props) => {
           </label>
             <label>
               <textarea
+                disabled
                 name="text"
                 value={state.text}
                 onChange={handleChange}
@@ -119,7 +120,7 @@ const PageHome = (props) => {
                 required=""
               />
             </label>
-            <button type="submit">Send</button>
+            <button type="submit" disabled>Send</button>
           </form>
         </div>
       </section>
