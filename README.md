@@ -2,7 +2,7 @@
 
 ## Description
 
-My personal portfolio built using React and Bootstrap. I'm continually adding projects, modifying content, and updating the look and functionality.
+My personal portfolio built using React, Bootstrap, Express. I'm continually adding projects, modifying content, and updating the look and functionality.
 
 ## Installation
 
