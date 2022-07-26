@@ -12,7 +12,7 @@ const ProjectWeather = () => {
             <img src={staticFolder() + "/img/weather.png"} alt="" />
           </div>
           <div className="project-buttons">
-            <a target="_blank" href="https://github.com/Mladen1506/weather-dashboard" rel="">GitHub</a>
+            <a target="_blank" href="https://github.com/Mladen1506/weather-app" rel="">GitHub</a>
             <a target="_blank" href="https://mladen1506.github.io/weather-dashboard/" rel="">Live View</a>
           </div>
         </div>

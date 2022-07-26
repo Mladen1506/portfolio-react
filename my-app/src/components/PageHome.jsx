@@ -1,7 +1,6 @@
 import React from 'react';
 import { staticFolder } from '../utils/url-lib';
 import PortfolioItem from './PortfolioItem';
-import SliderItem from './SliderItem';
 import { ajax } from '../utils/ajax-adapter';
 import { useState } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
@@ -67,7 +66,7 @@ const PageHome = (props) => {
           </div>
           <div className="buttons">
             <a href="/#portfolio" >Portfolio</a>
-            <a href="/resume">Resume</a>
+            <a target="_blank" href="/static/resume/Mladen_Makivic_Resume.pdf">Resume</a>
           </div>
 
         </div>
@@ -78,12 +77,12 @@ const PageHome = (props) => {
       <section className="portfolio" id='portfolio'>
         <h1>Portfolio</h1>
         <div className="container">
-
+          <PortfolioItem title="Azure Dream Day Spa" imagePath="/img/azure.png" fragment="azureapp" />
+          <PortfolioItem title="Hiking App" imagePath="/img/hiking.png" fragment="hikingapp" />
+          <PortfolioItem title="My Portfolio" imagePath="/img/portfolio.png" fragment="portfolio" />
           <PortfolioItem title="Weather App" imagePath="/img/weather.png" fragment="weatherapp" />
-          <PortfolioItem title="Horizeon" imagePath="/img/horizeon.png" fragment="horizeon" />
+          <PortfolioItem title="Horiseon" imagePath="/img/horizeon.png" fragment="horizeon" />
           <PortfolioItem title="Budget Tracker" imagePath="/img/budget.png" fragment="budgettracker" />
-          <PortfolioItem />
-          <PortfolioItem />
         </div>
       </section>
 

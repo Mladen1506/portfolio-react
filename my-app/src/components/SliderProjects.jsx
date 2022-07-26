@@ -1,9 +1,12 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { staticFolder } from "../utils/url-lib";
+import ProjectAzureDream from "./ProjectAzureDream";
 import ProjectBudgetTracker from "./ProjectBudgetTracker";
+import ProjectHikingApp from "./ProjectHikingApp";
 import ProjectHorizeon from "./ProjectHorizeon";
 import ProjectWeather from "./ProjectWeather";
+import ProjectPortfolio from "./ProjectPortfolio";
 import SliderItem from "./SliderItem";
 
 
@@ -14,16 +17,31 @@ const SliderProjects = (props) => {
   let jsxSlides = [
     (
       <SliderItem key={0}>
-        <ProjectHorizeon />
+        <ProjectAzureDream />
+      </SliderItem>
+    ),
+    (
+      <SliderItem key={1}>
+        <ProjectHikingApp />
       </SliderItem>
     ),
     (
       <SliderItem key={2}>
-        <ProjectWeather />
+        <ProjectPortfolio />
       </SliderItem>
     ),
     (
       <SliderItem key={3}>
+        <ProjectHorizeon />
+      </SliderItem>
+    ),
+    (
+      <SliderItem key={4}>
+        <ProjectWeather />
+      </SliderItem>
+    ),
+    (
+      <SliderItem key={5}>
         <ProjectBudgetTracker />
       </SliderItem>
     ),
@@ -57,13 +75,13 @@ const SliderProjects = (props) => {
     });
   };
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      // AUTO ADVANCE NEXT SLIDE
-      handleClickNext();
-      return () => clearInterval(intervalId);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     // AUTO ADVANCE NEXT SLIDE
+  //     handleClickNext();
+  //     return () => clearInterval(intervalId);
+  //   }, 5000);
+  // }, []);
 
   let offset = (slideIndex * -100) + '%'; // offset in percents
 
