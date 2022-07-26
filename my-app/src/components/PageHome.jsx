@@ -66,7 +66,7 @@ const PageHome = (props) => {
           </div>
           <div className="buttons">
             <a href="/#portfolio" >Portfolio</a>
-            <a href="/resume">Resume</a>
+            <a target="_blank" href="/static/resume/Mladen_Makivic_Resume.pdf">Resume</a>
           </div>
 
         </div>
