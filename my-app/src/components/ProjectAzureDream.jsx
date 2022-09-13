@@ -27,7 +27,7 @@ const ProjectAzureDream = () => {
           </div>
           <div className="project-description">
             <h3 className="project-subtitle">Description:</h3>
-            <p className="project-paragraph">This is my first project as Full Stack Web Developer. Completely redesigned existing website using React and then transfered files to customer Word Press Theme.</p>
+            <p className="project-paragraph">This is my first project as Full Stack Web Developer for a client. Completely refactor existing website using React and then transfered files to customer Word Press Theme. Direct communication with client to provide the best possible results.</p>
           </div>
         </div>
       </div>
