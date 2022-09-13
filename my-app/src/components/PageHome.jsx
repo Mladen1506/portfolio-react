@@ -65,7 +65,7 @@ const PageHome = (props) => {
             </a>
           </div>
           <div className="buttons">
-            <a href="/#portfolio" >Portfolio</a>
+            <a href="/#portfolio" >Projects</a>
             <a target="_blank" href="/static/resume/Mladen_Makivic_Resume.pdf">Resume</a>
           </div>
 
@@ -75,7 +75,7 @@ const PageHome = (props) => {
       </section>
 
       <section className="portfolio" id='portfolio'>
-        <h1>Portfolio</h1>
+        <h1>Projects</h1>
         <div className="container">
           <PortfolioItem title="Azure Dream Day Spa" imagePath="/img/azure.png" fragment="azureapp" />
           <PortfolioItem title="Hiking App" imagePath="/img/hiking.png" fragment="hikingapp" />
