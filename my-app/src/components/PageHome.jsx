@@ -67,6 +67,7 @@ const PageHome = (props) => {
           <div className="buttons">
             <a href="/#portfolio" >Projects</a>
             <a target="_blank" href="/static/resume/Mladen_Makivic_Resume.pdf">Resume</a>
+            <a href="/#aboutme" >About Me</a>
           </div>
 
         </div>
@@ -87,7 +88,19 @@ const PageHome = (props) => {
       </section>
 
 
-      <SliderProjects />
+      <section className="aboutme-section" id="aboutme">
+        <div className="left">
+          <div className="aboutme-text">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+          </div>
+        </div>
+        <div className="right">
+          <div className="aboutme-picture">
+            <img src={staticFolder() + "/img/mladen.jpg"} alt="Mladen Makivić" />
+          </div>
+        </div>
+      </section>
 
 
       <section className="contact" id="contact">
