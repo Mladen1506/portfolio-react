@@ -92,7 +92,8 @@ const PageHome = (props) => {
         <div className="left">
           <div className="aboutme-text">
             <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+            <p>My name is Mladen Makivic, I'm Full Stack Software Developer. I'm from Bosnia and Herzegovina, living in United States. I have a passion for learning and sharing my knowledge.</p>
+            <p>Graduated George Washington Bootcamp, Full Stack Web Developer.</p>
           </div>
         </div>
         <div className="right">
