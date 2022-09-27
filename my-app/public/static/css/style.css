@@ -827,6 +827,7 @@ h3 {
   padding: 20px;
 }
 .aboutme-section h2 {
+  font-size: 40px;
 }
 
 .aboutme-section .aboutme-picture {
@@ -836,19 +837,23 @@ h3 {
 }
 .aboutme-section .aboutme-picture img {
   width: 100%;
-  max-width: 150px;
+  max-width: 360px;
   height: auto;
 }
 
 .aboutme-section .aboutme-text {
   text-align: right;
   margin-left: auto;
-  max-width: 250px;
+  max-width: 300px;
+  font-size: 18px;
+}
+.aboutme-section .aboutme-text p {
+  margin: 1em 0px;
 }
 
-@media (max-width: 24rem) {
+@media (max-width: 27rem) {
   .aboutme-section {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
     padding-top: 0px;
